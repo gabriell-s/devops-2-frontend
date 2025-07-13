@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devops-2-frontend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: devops-2-frontend
+  template:
+    metadata:
+      labels:
+        app: devops-2-frontend
+    spec:
+      containers:
+        - name: devops-2-frontend
+          image: devops-2-frontend
+          env:
+            - name: VITE_API_URL
+              value: 'localhost:8080'
+          ports:
+            - containerPort: 8000
