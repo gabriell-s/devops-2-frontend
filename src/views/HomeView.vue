@@ -17,7 +17,7 @@
       <v-col cols="12" md="6" class="text-center">
         <DialogBook
           v-model:visible="isDialogVisible"
-          :book="selectedBook"
+          :book="selectedBook ?? undefined"
           @submitRegister="addBook"
         />
       </v-col>
@@ -109,7 +109,7 @@ const addBook = async (book: Omit<Book, 'id'>) => {
 }
 
 const isDialogVisible = ref(false)
-const selectedBook = ref<Book | null>(null)
+const selectedBook = ref<Book | undefined>(undefined)
 
 const openBookDialog = (book?: Book) => {
   if (book) {
@@ -120,7 +120,7 @@ const openBookDialog = (book?: Book) => {
       name: '',
       description: '',
       edition: '',
-      isbn: '',
+      isbn: 0,
       publication_date: '',
     }
   }

@@ -57,7 +57,7 @@ const props = defineProps<{
     name: string
     description: string
     edition: string
-    isbn: string
+    isbn: number
     publication_date: string
   }
 }>()

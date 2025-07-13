@@ -49,7 +49,7 @@ const formBook = ref({
   name: '',
   description: '',
   edition: '',
-  isbn: '',
+  isbn: 0,
   publication_date: '',
 })
 
@@ -57,7 +57,14 @@ watch(
   () => props.book,
   (newBook) => {
     if (newBook) {
-      formBook.value = { ...newBook }
+      formBook.value = {
+        public_id: newBook.public_id ?? '',
+        name: newBook.name ?? '',
+        description: newBook.description ?? '',
+        edition: newBook.edition ?? '',
+        isbn: newBook.isbn ?? 0,
+        publication_date: newBook.publication_date ?? '',
+      }
     }
   },
   { immediate: true },
