@@ -13,7 +13,7 @@ RUN npm run build
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
-EXPOSE 8080
+EXPOSE 8000
 CMD ["/entrypoint.sh"]
 
 
