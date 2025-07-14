@@ -1,9 +1,9 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-  - deployment.yaml
-  - service.yaml
+- deployment.yaml
+- service.yaml
 images:
-  - name: devops-2-frontend
-    newName: gbrlls/devops-2-frontend
-    newTag: latest
+- name: devops-2-frontend
+  newName: gbrlls/devops-2-frontend
+  newTag: ef221d18ee4c79749cecaae7d86d9b3a33ffa5a4
