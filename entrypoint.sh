@@ -8,4 +8,4 @@ window.env = {
 EOF
 
 # Inicia o servidor
-exec http-server dist
+exec http-server dist -p 8000
