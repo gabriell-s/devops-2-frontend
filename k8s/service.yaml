@@ -7,5 +7,6 @@ spec:
     app: devops-2-frontend
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 8000
+      port: 5173
+      targetPort: 5173
+      nodePort: 30500
