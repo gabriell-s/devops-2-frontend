@@ -17,6 +17,9 @@ spec:
           image: devops-2-frontend
           env:
             - name: VITE_API_URL
-              value: 'localhost:8080'
+              valueFrom:
+                secretKeyRef:
+                  name: frontend-secret
+                  key: VITE_API_URL
           ports:
             - containerPort: 8000
