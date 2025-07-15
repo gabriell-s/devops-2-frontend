@@ -6,4 +6,4 @@ resources:
 images:
 - name: devops-2-frontend
   newName: gbrlls/devops-2-frontend
-  newTag: 050c88c9f713f3a6467ff1e65048a756535ad71c
+  newTag: 2004a88ef09e9307384ed94f080c01a7d95ce876
